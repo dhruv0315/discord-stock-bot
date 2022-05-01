@@ -89,9 +89,10 @@ function getInput() {
     if (command === "list") {
       msg.channel.send(sampleTickers.join(", "));
     } else if (command == "add") {
-      sampleTickers.push(args[0]);
+      sampleTickers.push(args[0].toUpperCase());
       msg.reply(
-        args[0] + " has been added to the list! Type '.list' to check the list."
+        args[0].toUpperCase() +
+          " has been added to the list! Type '.list' to check the list."
       );
     } else if (command == "price") {
       args[0].toUpperCase();
